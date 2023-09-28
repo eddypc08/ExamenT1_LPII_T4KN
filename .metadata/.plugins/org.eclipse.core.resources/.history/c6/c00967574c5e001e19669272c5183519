@@ -1,0 +1,35 @@
+package Controllers;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import Models.Empleado;
+
+
+public class EmpleadoController {
+
+	public String CreateUsuario(String nombre,String apellido,String ciudad) {
+		SessionFactory sessionFactory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Empleado.class).buildSessionFactory();
+		
+		Session session = sessionFactory.openSession();
+		
+		try {
+			Usuario usuario = new Usuario(nombre,apellido,ciudad);
+			
+			session.beginTransaction();
+			session.save(usuario);
+			session.getTransaction().commit();
+			
+			sessionFactory.close();
+			
+			return "Usuario creado";
+			
+		}catch(Exception e){
+			
+			e.printStackTrace();
+		}
+		return "Error al registrar usuario";
+	}
+
+}

@@ -1,0 +1,13 @@
+package Views;
+
+import Controllers.UsuarioController;
+
+public class UsuarioView {
+
+	public static void main(String[] args) {
+		String usuario = new UsuarioController().CreateUsuario("Carlos","Caceres","Mexico");
+		System.out.print(usuario);
+	
+	}
+
+}

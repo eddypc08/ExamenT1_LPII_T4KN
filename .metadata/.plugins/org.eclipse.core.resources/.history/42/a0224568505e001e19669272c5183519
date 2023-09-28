@@ -1,0 +1,24 @@
+package Views;
+
+import Controllers.EmpleadoController;
+
+public class EmpleadoView {
+
+	
+	public static void main(String[] args) {
+		//CREAR USUARIO
+		//String empleado = new EmpleadoController().CrearEmpleado("Paucar","Eddy",24,"Masculino",1500);
+		
+		//ELIMINAR USUARIO
+		//String empleado = new EmpleadoController().EliminarEmpleado(1);
+		
+		//ACTUALIZAR USUARIO
+		//String empleado = new EmpleadoController().ActualizarUsuario(2,"Paucar Castro","Eddy",24,"Masculino",1800);
+
+		//LEER USUARIO
+		String empleado = new EmpleadoController().LeerEmpleado(2);	
+		
+		System.out.print(empleado);
+	
+	}
+}
