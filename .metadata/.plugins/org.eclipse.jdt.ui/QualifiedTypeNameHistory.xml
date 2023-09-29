@@ -11,4 +11,6 @@
     <fullyQualifiedTypeName name="Controllers.UsuarioController"/>
     <fullyQualifiedTypeName name="Views.UsuarioView"/>
     <fullyQualifiedTypeName name="Models.Usuario"/>
+    <fullyQualifiedTypeName name="Models.Empleado"/>
+    <fullyQualifiedTypeName name="Controllers.EmpleadoController"/>
 </qualifiedTypeNameHistroy>
